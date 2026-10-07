@@ -21,7 +21,7 @@ body{background:radial-gradient(1200px 600px at 85% -10%,#e9eefc 0%,transparent 
 .progress{height:4px;background:var(--bg2)} .progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#5b86f7);transition:width .3s ease}
 .topbar-inner{display:flex;align-items:center;gap:14px;padding:8px 18px;flex-wrap:wrap}.brand{font-family:var(--font-display);font-weight:700;font-size:1.02rem;white-space:nowrap}.brand b{color:var(--accent)}
 .secnav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}.secnav button{font:inherit;font-size:.8rem;font-weight:600;color:var(--ink-soft);background:transparent;border:1px solid transparent;border-radius:999px;padding:5px 12px;cursor:pointer}.secnav button:hover{background:var(--accent-soft);color:var(--accent-dark)}.secnav button.active{background:var(--accent);color:#fff}
-.stage{max-width:1060px;margin:0 auto;padding:96px 22px 130px}.slide{display:none;animation:fade .35s ease}.slide.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.stage{max-width:1120px;margin:0 auto;padding:92px 22px 118px}.slide{display:none;animation:fade .35s ease;transform-origin:top center}.slide.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .kicker{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:999px}.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
 h1.title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;margin:.35em 0 .25em}h2.head{font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.12;margin:.4em 0 .5em}h3{font-size:1.12rem;margin:1.2em 0 .5em}p{margin:.6em 0;color:var(--ink-soft)}.lead{font-size:1.12rem;color:var(--ink-soft);max-width:66ch}.small{font-size:.86rem;color:var(--muted)}.center{text-align:center}strong{color:var(--ink)}
 .grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}@media(max-width:820px){.g2,.g3,.g4{grid-template-columns:1fr}}
@@ -150,8 +150,8 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--
         <text x="122" y="126" text-anchor="middle" font-size="22" fill="#2447a2">−  −  −  −</text>
         <circle cx="420" cy="120" r="88" fill="#fff" stroke="#8d98ad" stroke-width="3"/>
         <text x="368" y="99" font-size="24" fill="#b62929">+ + +</text><text x="443" y="150" font-size="24" fill="#2450b5">− − −</text>
-        <path d="M 320 190 C 250 210, 210 195, 180 165" fill="none" stroke="#2f5fe0" stroke-width="4" marker-end="url(#arr)"/>
-        <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2f5fe0"/></marker></defs>
+        <path d="M 320 190 C 250 210, 210 195, 180 165" fill="none" stroke="#2f5fe0" stroke-width="4" marker-end="url(#arr)"></path>
+        <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2f5fe0"></path></marker></defs>
         <text x="315" y="236" text-anchor="middle" font-size="16" fill="#737d96">electrons are repelled to the far side</text>
       </svg>
       <figcaption>No contact: the nearby charged object causes separation of charge.</figcaption>
@@ -177,9 +177,9 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--
   <div class="grid g2">
     <figure class="svgcard">
       <svg viewBox="0 0 430 430" role="img" aria-label="Simple electroscope diagram">
-        <circle cx="215" cy="55" r="38" fill="#f8cc69" stroke="#7b6530" stroke-width="3"/><line x1="215" y1="93" x2="215" y2="245" stroke="#626a78" stroke-width="10"/>
-        <path d="M215 245 L160 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"/><path d="M215 245 L270 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"/>
-        <rect x="100" y="120" width="230" height="260" rx="28" fill="none" stroke="#cfd6e6" stroke-width="4"/>
+        <circle cx="215" cy="55" r="38" fill="#f8cc69" stroke="#7b6530" stroke-width="3"></circle><line x1="215" y1="93" x2="215" y2="245" stroke="#626a78" stroke-width="10"></line>
+        <path d="M215 245 L160 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"></path><path d="M215 245 L270 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"></path>
+        <rect x="100" y="120" width="230" height="260" rx="28" fill="none" stroke="#cfd6e6" stroke-width="4"></rect>
         <text x="304" y="55" font-size="16" fill="#46506b">metal ball</text><text x="240" y="175" font-size="16" fill="#46506b">metal rod</text><text x="274" y="326" font-size="16" fill="#46506b">metal leaves</text>
       </svg>
       <figcaption>Basic parts: metal ball/knob, metal rod, and two metallic leaves.</figcaption>
@@ -258,23 +258,20 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--
   <div class="qbox"><span class="qn">MCQ · Q5</span><p>A neutral metal sphere loses 2.5 × 10<sup>13</sup> electrons. What is the resulting charge?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Losing electrons makes it positive.<br>Q = +(2.5 × 10<sup>13</sup>)(1.6 × 10<sup>−19</sup>) = <strong>+4.0 × 10<sup>−6</sup> C</strong>.</div></div>
   <div class="qbox"><span class="qn">MCQ · Q6</span><p>An object initially has −6.4 × 10<sup>−19</sup> C and then loses 7 electrons. Find its final charge.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Initial charge = −4e. Losing 7 electrons changes the charge by +7e.<br>Final charge = (−4e + 7e) = +3e = <strong>+4.8 × 10<sup>−19</sup> C</strong>.</div></div>
   <div class="qbox"><span class="qn">MCQ · Q7</span><p>Can an object have a charge of −3.0 × 10<sup>−19</sup> C if charge is quantized in units of e = 1.6 × 10<sup>−19</sup> C?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">N = |Q|/e = 3.0/1.6 = 1.875, which is not an integer number of electrons. Therefore <strong>the stated charge is not possible as an exact isolated-object charge in this model</strong>.</div></div>
-  <div class="qbox"><span class="qn">MCQ · Q8</span><p>A neutral object gains 3.75 × 10<sup>13</sup> electrons and then loses 1.25 × 10<sup>13</sup> electrons. Find the final charge and net electron transfer.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Net gain = 3.75 × 10<sup>13</sup> − 1.25 × 10<sup>13</sup> = 2.50 × 10<sup>13</sup> electrons.<br>Q = −(2.50 × 10<sup>13</sup>)(1.6 × 10<sup>−19</sup>) = <strong>−4.0 μC</strong>. Net transfer: <strong>gain of 2.50 × 10<sup>13</sup> electrons</strong>.</div></div>
 </section>
 
 <section class="slide" data-section="practice">
-  <span class="kicker"><span class="dot"></span> Final formula sheet</span>
+  <span class="kicker"><span class="dot"></span> Final summary</span>
   <h2 class="head">Everything to memorize</h2>
   <div class="grid g2">
-    <div class="formula"><div class="eq">Q = N·e</div><div class="where">quantity of charge</div></div>
-    <div class="formula"><div class="eq">N = |Q| / e</div><div class="where">number of excess or missing electrons</div></div>
-    <div class="formula"><div class="eq">e = 1.6 × 10<sup>−19</sup> C</div><div class="where">magnitude of one elementary charge</div></div>
-    <div class="formula"><div class="eq">1 nC = 10<sup>−9</sup> C &nbsp; · &nbsp; 1 μC = 10<sup>−6</sup> C</div><div class="where">unit conversions</div></div>
+    <div class="good"><strong>Core ideas</strong><ul style="margin:.5em 0 0;padding-left:1.15em"><li>Electric charge can be positive, negative or zero.</li><li>A negative object has excess electrons.</li><li>A positive object has a deficit of electrons.</li><li>The quantity of charge is found using <strong>Q = N·e</strong>.</li><li><strong>e = 1.6 × 10<sup>−19</sup> C</strong>.</li></ul></div>
+    <div class="good"><strong>Electrification &amp; detection</strong><ul style="margin:.5em 0 0;padding-left:1.15em"><li>Friction = rubbing.</li><li>Contact = touching.</li><li>Induction = nearby charged object, no touching.</li><li>Grounding lets electrons move to or from Earth.</li><li>An electroscope detects charge; leaves diverge because like charges repel.</li></ul></div>
   </div>
-  <div class="callout"><div class="t">Sign memory</div><strong>Gain electrons → negative.</strong> &nbsp; <strong>Lose electrons → positive.</strong></div>
+  <div class="formula"><div class="eq">Gain electrons → negative &nbsp;|&nbsp; Lose electrons → positive</div></div>
 </section>
 
 <section class="slide" data-section="practice">
-  <span class="kicker"><span class="dot"></span> Final checklist</span>
+  <span class="kicker"><span class="dot"></span> Self-check</span>
   <h2 class="head">Can you do these without looking back?</h2>
   <ul class="check" id="checklist">
     <li><span class="bx"></span><span>Use Q = N·e and N = |Q|/e.</span></li>
@@ -303,11 +300,42 @@ table.tbl{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--
   slides.forEach(function(s,i){var sec=s.dataset.section;if(firstIndex[sec]===undefined)firstIndex[sec]=i;});
   var nav=document.getElementById('secnav');
   order.forEach(function(sec){var b=document.createElement('button');b.textContent=labels[sec];b.dataset.sec=sec;b.addEventListener('click',function(){show(firstIndex[sec]);});nav.appendChild(b);});
-  function show(i){cur=Math.max(0,Math.min(i,slides.length-1));slides.forEach(function(s,j){s.classList.toggle('show',j===cur);});document.getElementById('prevBtn').disabled=(cur===0);document.getElementById('nextBtn').disabled=(cur===slides.length-1);document.getElementById('counter').textContent=(cur+1)+' / '+slides.length;document.getElementById('progbar').style.width=((cur+1)/slides.length*100)+'%';var sec=slides[cur].dataset.section;Array.prototype.forEach.call(nav.children,function(b){b.classList.toggle('active',b.dataset.sec===sec);});window.scrollTo(0,0);}
-  document.getElementById('prevBtn').addEventListener('click',function(){show(cur-1);});document.getElementById('nextBtn').addEventListener('click',function(){show(cur+1);});document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
+  function fitCurrentSlide(){
+    var s=slides[cur]; if(!s) return;
+    s.style.zoom='';
+    var topH=document.querySelector('.topbar').offsetHeight||0;
+    var botH=document.querySelector('.navbar').offsetHeight||0;
+    var availH=window.innerHeight-topH-botH-44;
+    var availW=document.getElementById('stage').clientWidth;
+    var contentH=s.scrollHeight;
+    var contentW=s.scrollWidth;
+    var scaleH=availH/contentH;
+    var scaleW=availW/contentW;
+    var scale=Math.min(scaleH,scaleW);
+    if(!isFinite(scale)||scale<=0) scale=1;
+    scale=scale*1.18;
+    scale=Math.max(0.95,Math.min(1.45,scale));
+    s.style.zoom=scale.toFixed(3);
+  }
+  function show(i){
+    cur=Math.max(0,Math.min(i,slides.length-1));
+    slides.forEach(function(s,j){s.classList.toggle('show',j===cur);s.style.zoom='';});
+    document.getElementById('prevBtn').disabled=(cur===0);
+    document.getElementById('nextBtn').disabled=(cur===slides.length-1);
+    document.getElementById('counter').textContent=(cur+1)+' / '+slides.length;
+    document.getElementById('progbar').style.width=((cur+1)/slides.length*100)+'%';
+    var sec=slides[cur].dataset.section;
+    Array.prototype.forEach.call(nav.children,function(b){b.classList.toggle('active',b.dataset.sec===sec);});
+    window.scrollTo(0,0);
+    requestAnimationFrame(function(){fitCurrentSlide(); window.scrollTo(0,0);});
+  }
+  document.getElementById('prevBtn').addEventListener('click',function(){show(cur-1);});
+  document.getElementById('nextBtn').addEventListener('click',function(){show(cur+1);});
+  document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
   Array.prototype.forEach.call(document.querySelectorAll('.maprow'),function(el){el.addEventListener('click',function(){var t=el.dataset.go;if(firstIndex[t]!==undefined)show(firstIndex[t]);});});
-  window.sol=function(btn){var x=btn.nextElementSibling;var open=x.classList.toggle('open');btn.textContent=open?'Hide solution':'Show solution';};
-  Array.prototype.forEach.call(document.querySelectorAll('#checklist li'),function(li){li.addEventListener('click',function(){li.classList.toggle('done');});});
+  window.sol=function(btn){var x=btn.nextElementSibling;var open=x.classList.toggle('open');btn.textContent=open?'Hide solution':'Show solution';setTimeout(fitCurrentSlide,0);};
+  Array.prototype.forEach.call(document.querySelectorAll('#checklist li'),function(li){li.addEventListener('click',function(){li.classList.toggle('done');setTimeout(fitCurrentSlide,0);});});
+  window.addEventListener('resize',fitCurrentSlide);
   show(0);
 })();
 </script>
