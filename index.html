@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 10 Physics - Electrostatics Quiz Study Guide</title>
+<style>
+:root{
+  --bg:#f4f6fb; --bg2:#eef2f9; --card:#ffffff; --ink:#1c2541; --ink-soft:#46506b;
+  --muted:#737d96; --line:#e2e7f1; --accent:#2f5fe0; --accent-dark:#1d3fb0;
+  --accent-soft:#e8f0ff; --accent-soft2:#dbe6ff; --warn-bg:#fff6e8; --warn-ink:#9a5b00;
+  --warn-line:#f3d199; --good-bg:#e8f7ee; --good-ink:#1d7a44; --good-line:#bce6cd;
+  --formula-bg:#f0f4ff; --shadow:0 1px 2px rgba(28,37,65,.06),0 8px 24px rgba(28,37,65,.06);
+  --font-display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:"SF Mono","Cascadia Code","Roboto Mono",Consolas,"Courier New",monospace;
+}
+*{box-sizing:border-box} html,body{margin:0;padding:0}
+body{background:radial-gradient(1200px 600px at 85% -10%,#e9eefc 0%,transparent 60%),radial-gradient(900px 500px at -10% 110%,#eaf1ff 0%,transparent 55%),var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.84);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.progress{height:4px;background:var(--bg2)} .progress>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),#5b86f7);transition:width .3s ease}
+.topbar-inner{display:flex;align-items:center;gap:14px;padding:8px 18px;flex-wrap:wrap}.brand{font-family:var(--font-display);font-weight:700;font-size:1.02rem;white-space:nowrap}.brand b{color:var(--accent)}
+.secnav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}.secnav button{font:inherit;font-size:.8rem;font-weight:600;color:var(--ink-soft);background:transparent;border:1px solid transparent;border-radius:999px;padding:5px 12px;cursor:pointer}.secnav button:hover{background:var(--accent-soft);color:var(--accent-dark)}.secnav button.active{background:var(--accent);color:#fff}
+.stage{max-width:1060px;margin:0 auto;padding:96px 22px 130px}.slide{display:none;animation:fade .35s ease}.slide.show{display:block}@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:5px 12px;border-radius:999px}.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+h1.title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.3rem);line-height:1.08;margin:.35em 0 .25em}h2.head{font-family:var(--font-display);font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.12;margin:.4em 0 .5em}h3{font-size:1.12rem;margin:1.2em 0 .5em}p{margin:.6em 0;color:var(--ink-soft)}.lead{font-size:1.12rem;color:var(--ink-soft);max-width:66ch}.small{font-size:.86rem;color:var(--muted)}.center{text-align:center}strong{color:var(--ink)}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}@media(max-width:820px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow)}.card h3{margin-top:0}.tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:6px}
+.callout{border-radius:14px;padding:16px 18px;border:1px solid var(--accent-soft2);background:var(--accent-soft);color:var(--ink)}.callout .t{font-weight:700;color:var(--accent-dark);margin-bottom:3px}
+.mistake{border-radius:14px;padding:14px 18px;border:1px solid var(--warn-line);background:var(--warn-bg)}.mistake .t{font-weight:700;color:var(--warn-ink);margin-bottom:6px}.mistake ul{margin:.3em 0;padding-left:1.2em;color:#7a5310}.mistake li{margin:.3em 0}
+.good{border-radius:14px;padding:14px 18px;border:1px solid var(--good-line);background:var(--good-bg);color:var(--good-ink)}.def{border-left:4px solid var(--accent);background:#fbfcff;padding:10px 16px;border-radius:0 12px 12px 0;margin:10px 0}.def b{color:var(--ink)}
+.formula{background:var(--formula-bg);border:1px solid var(--accent-soft2);border-radius:14px;padding:16px 20px;margin:14px 0}.formula .eq{font-family:var(--font-display);font-size:1.48rem;line-height:1.35;color:var(--ink);text-align:center}.formula .where{font-size:.88rem;color:var(--muted);text-align:center;margin-top:8px}.unit{font-family:var(--font-mono);font-size:.92em;color:var(--accent-dark);background:var(--accent-soft);padding:1px 6px;border-radius:5px;white-space:nowrap}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0}ol.steps li{position:relative;padding:10px 10px 10px 48px;margin:8px 0;background:var(--card);border:1px solid var(--line);border-radius:12px}ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.qbox{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:14px 18px;margin:12px 0;box-shadow:var(--shadow)}.qbox .qn{font-weight:700;color:var(--accent-dark);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}.qbox p{margin:.35em 0;color:var(--ink)}
+.solbtn{font:inherit;font-size:.82rem;font-weight:600;color:var(--accent-dark);background:var(--accent-soft);border:1px solid var(--accent-soft2);border-radius:8px;padding:6px 12px;cursor:pointer;margin-top:8px}.solbtn:hover{background:var(--accent-soft2)}
+.solution{display:none;margin-top:10px;padding:12px 14px;border-radius:10px;background:var(--good-bg);border:1px solid var(--good-line);color:#235f3c;font-size:.92rem}.solution.open{display:block;animation:fade .2s ease}.solution strong{color:var(--good-ink)}
+table.tbl{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}table.tbl th,table.tbl td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}table.tbl th{background:var(--accent-soft);color:var(--accent-dark);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase}table.tbl tr:last-child td{border-bottom:none}table.tbl td:first-child{font-weight:600;color:var(--ink)}
+.maprow{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0;box-shadow:var(--shadow);cursor:pointer;transition:.15s}.maprow:hover{border-color:var(--accent);transform:translateX(4px)}.maprow .num{flex:none;width:40px;height:40px;border-radius:11px;background:var(--accent-soft);color:var(--accent-dark);font-family:var(--font-display);font-weight:700;font-size:1.2rem;display:flex;align-items:center;justify-content:center}.maprow .mt{font-weight:700}.maprow .md{font-size:.88rem;color:var(--muted)}
+.flow{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:14px 0}.flow .node{flex:1;min-width:135px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;text-align:center;box-shadow:var(--shadow)}.flow .arrow{color:var(--accent);font-weight:800;font-size:1.3rem}
+.svgcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}.svgcard svg{width:100%;height:auto;display:block}figcaption{text-align:center;font-size:.85rem;color:var(--muted);margin-top:6px}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:10px}.check li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);cursor:pointer}.check li .bx{flex:none;width:22px;height:22px;border:2px solid var(--accent);border-radius:6px;margin-top:2px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}.check li.done .bx{background:var(--accent)}.check li.done .bx::after{content:"✓"}.check li.done span{color:var(--muted);text-decoration:line-through}
+.navbar{position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-top:1px solid var(--line)}.navbar-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:12px 22px}.navbtn{font:inherit;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:10px 20px;cursor:pointer}.navbtn:hover:not(:disabled){border-color:var(--accent);color:var(--accent-dark);background:var(--accent-soft)}.navbtn:disabled{opacity:.4;cursor:not-allowed}.navbtn.primary{background:var(--accent);color:#fff;border-color:var(--accent);margin-left:auto}.counter{font-size:.85rem;color:var(--muted);font-family:var(--font-mono)}.kbdhint{font-size:.78rem;color:var(--muted)}.kbd{font-family:var(--font-mono);font-size:.74rem;background:var(--bg2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--ink-soft)}
+.charge-pill{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;padding:0 10px;border-radius:999px;font-weight:800}.pos{background:#ffe9e9;color:#b62929;border:1px solid #f4bcbc}.neg{background:#e9efff;color:#2450b5;border:1px solid #c7d5ff}.neu{background:#eef1f5;color:#586274;border:1px solid #d9dee7}
+.big{font-family:var(--font-display);font-weight:700;font-size:1.25rem;color:var(--ink)}.arrowline{font-size:1.2rem;color:var(--accent);font-weight:800}.subtle{background:#fafbff;border:1px dashed var(--line);border-radius:12px;padding:12px 14px}
+@media print{.topbar,.navbar{display:none}.stage{padding:20px}.slide{display:block!important;break-inside:avoid;margin-bottom:28px}.solbtn{display:none}.solution{display:block!important}.maprow{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="progress"><i id="progbar"></i></div><div class="topbar-inner"><div class="brand">Physics <b>·</b> Grade 10 Electrostatics Revision</div><nav class="secnav" id="secnav"></nav></div></div>
+<main class="stage" id="stage">
+
+<section class="slide" data-section="start">
+  <div class="center" style="padding-top:4vh">
+    <span class="kicker"><span class="dot"></span> Quiz Study Guide · Electrostatics</span>
+    <h1 class="title">Electric Charge &amp;<br>Electrification</h1>
+    <p class="lead center" style="margin:0 auto">Focused only on the announced quiz material: <strong>quantity of electric charge Q = N·e</strong>, the <strong>three modes of electrification</strong>, <strong>electroscope</strong>, and <strong>grounding</strong>.</p>
+    <div class="callout" style="max-width:800px;margin:28px auto 0;text-align:left"><div class="t">Important scope</div><strong>The law of conservation of charge is not included in this guide because it is not required for the quiz.</strong> A conservation sub-question appearing in one worksheet is intentionally omitted from the practice section.</div>
+  </div>
+</section>
+
+<section class="slide" data-section="start">
+  <span class="kicker"><span class="dot"></span> Study map</span>
+  <h2 class="head">What you need to know</h2>
+  <div class="maprow" data-go="charge"><div class="num">1</div><div><div class="mt">Quantity of electric charge</div><div class="md">Positive, negative and neutral · excess/deficit electrons · Q = N·e · unit conversions</div></div></div>
+  <div class="maprow" data-go="modes"><div class="num">2</div><div><div class="mt">Three modes of electrification</div><div class="md">Friction · contact (conduction) · induction</div></div></div>
+  <div class="maprow" data-go="scope"><div class="num">3</div><div><div class="mt">Electroscope &amp; grounding</div><div class="md">What the electroscope detects · why the leaves diverge · grounding during induction</div></div></div>
+  <div class="maprow" data-go="practice"><div class="num">★</div><div><div class="mt">Worksheet exercises with solutions</div><div class="md">Problems taken from both attached worksheets, with the conservation-only sub-question excluded</div></div></div>
+</section>
+
+<section class="slide" data-section="charge">
+  <span class="kicker"><span class="dot"></span> Electric charge · essentials</span>
+  <h2 class="head">Positive, negative and neutral objects</h2>
+  <div class="grid g3">
+    <div class="card center"><span class="charge-pill pos">+</span><h3>Positive object</h3><p>Has a <strong>deficit of electrons</strong>. It became positive because electrons were removed.</p></div>
+    <div class="card center"><span class="charge-pill neg">−</span><h3>Negative object</h3><p>Has an <strong>excess of electrons</strong>. It became negative because electrons were added.</p></div>
+    <div class="card center"><span class="charge-pill neu">0</span><h3>Neutral object</h3><p>Has equal amounts of positive and negative charge, so the <strong>net charge is zero</strong>.</p></div>
+  </div>
+  <div class="callout" style="margin-top:16px"><div class="t">The key particle</div>In ordinary charging problems, <strong>electrons move</strong>. Protons remain bound inside the nuclei of atoms.</div>
+</section>
+
+<section class="slide" data-section="charge">
+  <span class="kicker"><span class="dot"></span> Quantity of electric charge</span>
+  <h2 class="head">The formula Q = N·e</h2>
+  <div class="formula"><div class="eq"><strong>Q = N·e</strong></div><div class="where">Q = quantity of charge in coulombs (C) · N = number of excess or missing electrons · e = elementary charge</div></div>
+  <div class="grid g2">
+    <div class="card"><div class="tag">Elementary charge</div><div class="big">e = 1.6 × 10<sup>−19</sup> C</div><p>The magnitude of the charge of one electron or one proton.</p></div>
+    <div class="card"><div class="tag">Rearranged form</div><div class="big">N = |Q| / e</div><p>Use the magnitude |Q| to calculate how many electrons are involved, then use the sign of Q to decide <strong>excess</strong> or <strong>deficit</strong>.</p></div>
+  </div>
+  <table class="tbl" style="margin-top:16px"><thead><tr><th>Situation</th><th>Charge sign</th><th>Electron description</th></tr></thead><tbody><tr><td>Electrons added</td><td>Q &lt; 0</td><td>Excess electrons</td></tr><tr><td>Electrons removed</td><td>Q &gt; 0</td><td>Deficit of electrons</td></tr></tbody></table>
+</section>
+
+<section class="slide" data-section="charge">
+  <span class="kicker"><span class="dot"></span> Calculation method</span>
+  <h2 class="head">How to solve any Q = N·e question</h2>
+  <ol class="steps"><li>Identify what is given: <strong>Q</strong> or <strong>N</strong>.</li><li>Convert the charge to <strong>coulombs</strong> if it is given in nC or μC.</li><li>Use <strong>Q = N·e</strong> or <strong>N = |Q|/e</strong>.</li><li>Use the electron information to determine the sign: <strong>gain electrons → negative</strong>, <strong>lose electrons → positive</strong>.</li><li>Check that N is a whole number when the question is about an exact number of elementary charges.</li></ol>
+  <div class="grid g3">
+    <div class="card center"><div class="tag">nano</div><div class="big">1 nC = 10<sup>−9</sup> C</div></div>
+    <div class="card center"><div class="tag">micro</div><div class="big">1 μC = 10<sup>−6</sup> C</div></div>
+    <div class="card center"><div class="tag">elementary</div><div class="big">e = 1.6 × 10<sup>−19</sup> C</div></div>
+  </div>
+</section>
+
+<section class="slide" data-section="charge">
+  <span class="kicker"><span class="dot"></span> Worked examples</span>
+  <h2 class="head">Three examples you should be able to copy</h2>
+  <div class="grid g3">
+    <div class="card"><div class="tag">Example 1</div><p><strong>4 excess electrons</strong></p><p>Q = −4e<br>= −4(1.6 × 10<sup>−19</sup>)<br><strong>Q = −6.4 × 10<sup>−19</sup> C</strong></p></div>
+    <div class="card"><div class="tag">Example 2</div><p><strong>3 missing electrons</strong></p><p>Q = +3e<br>= +3(1.6 × 10<sup>−19</sup>)<br><strong>Q = +4.8 × 10<sup>−19</sup> C</strong></p></div>
+    <div class="card"><div class="tag">Example 3</div><p><strong>Q = −3.2 × 10<sup>−18</sup> C</strong></p><p>N = |Q|/e<br>= (3.2 × 10<sup>−18</sup>)/(1.6 × 10<sup>−19</sup>)<br><strong>N = 20 excess electrons</strong></p></div>
+  </div>
+</section>
+
+<section class="slide" data-section="modes">
+  <span class="kicker"><span class="dot"></span> Modes of electrification</span>
+  <h2 class="head">The three ways an object can be electrified</h2>
+  <table class="tbl"><thead><tr><th>Mode</th><th>Does touching occur?</th><th>Main idea</th><th>What happens to electrons?</th></tr></thead><tbody>
+    <tr><td>Friction (rubbing)</td><td>Yes, while rubbing</td><td>Two materials are rubbed together.</td><td>Electrons transfer from one material to the other.</td></tr>
+    <tr><td>Contact / conduction</td><td>Yes</td><td>A charged object touches another object.</td><td>Electrons transfer through the point of contact.</td></tr>
+    <tr><td>Induction</td><td>No direct contact with the charging object</td><td>A charged object is brought near a conductor.</td><td>Electrons rearrange; grounding can allow electrons to enter or leave.</td></tr>
+  </tbody></table>
+  <div class="mistake" style="margin-top:16px"><div class="t">Fast distinction</div><ul><li><strong>Friction:</strong> rubbing.</li><li><strong>Contact:</strong> touching with a charged object.</li><li><strong>Induction:</strong> the charged object stays nearby but does not touch.</li></ul></div>
+</section>
+
+<section class="slide" data-section="modes">
+  <span class="kicker"><span class="dot"></span> Mode 1</span>
+  <h2 class="head">Electrification by friction</h2>
+  <div class="grid g2">
+    <div class="card"><div class="tag">What happens</div><p>When two neutral materials are rubbed, one material can <strong>lose electrons</strong> and the other can <strong>gain electrons</strong>.</p><div class="flow"><div class="node">Material A<br><strong>loses e⁻</strong><br><span class="charge-pill pos">+</span></div><div class="arrow">e⁻ →</div><div class="node">Material B<br><strong>gains e⁻</strong><br><span class="charge-pill neg">−</span></div></div></div>
+    <div class="card"><div class="tag">Example from the notes</div><p>When a glass rod is rubbed with silk, the glass rod is shown becoming <strong>positively charged</strong>, meaning it has lost electrons.</p><div class="callout"><div class="t">Exam wording</div>“Rubbing” or “friction” is the clue that identifies this mode.</div></div>
+  </div>
+</section>
+
+<section class="slide" data-section="modes">
+  <span class="kicker"><span class="dot"></span> Mode 2</span>
+  <h2 class="head">Electrification by contact (conduction)</h2>
+  <div class="grid g2">
+    <div class="card"><div class="tag">Negative object touches neutral conductor</div><p>Electrons move from the negatively charged object to the neutral conductor. The neutral conductor becomes <strong>negative</strong>.</p><div class="flow"><div class="node"><span class="charge-pill neg">−</span><br>charged object</div><div class="arrow">e⁻ →</div><div class="node"><span class="charge-pill neu">0</span> → <span class="charge-pill neg">−</span><br>neutral object</div></div></div>
+    <div class="card"><div class="tag">Positive object touches neutral conductor</div><p>Electrons move from the neutral object toward the positively charged object. The neutral object is left with a <strong>deficit of electrons</strong> and becomes positive.</p><div class="callout"><div class="t">Key clue</div>Contact means the two objects <strong>physically touch</strong>.</div></div>
+  </div>
+</section>
+
+<section class="slide" data-section="modes">
+  <span class="kicker"><span class="dot"></span> Mode 3</span>
+  <h2 class="head">Electrification by induction</h2>
+  <div class="def"><b>Induction:</b> a charged object is brought near a conductor without direct contact, causing the conductor’s electrons to rearrange.</div>
+  <div class="grid g2">
+    <figure class="svgcard">
+      <svg viewBox="0 0 600 270" role="img" aria-label="Negative rod near conductor causing charge separation">
+        <rect x="34" y="93" width="175" height="54" rx="12" fill="#dfe7ff" stroke="#6d83c9" stroke-width="2"/>
+        <text x="122" y="126" text-anchor="middle" font-size="22" fill="#2447a2">−  −  −  −</text>
+        <circle cx="420" cy="120" r="88" fill="#fff" stroke="#8d98ad" stroke-width="3"/>
+        <text x="368" y="99" font-size="24" fill="#b62929">+ + +</text><text x="443" y="150" font-size="24" fill="#2450b5">− − −</text>
+        <path d="M 320 190 C 250 210, 210 195, 180 165" fill="none" stroke="#2f5fe0" stroke-width="4" marker-end="url(#arr)"/>
+        <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2f5fe0"/></marker></defs>
+        <text x="315" y="236" text-anchor="middle" font-size="16" fill="#737d96">electrons are repelled to the far side</text>
+      </svg>
+      <figcaption>No contact: the nearby charged object causes separation of charge.</figcaption>
+    </figure>
+    <div class="card"><div class="tag">With grounding</div><p>A conductor can be permanently charged by induction when it is also <strong>grounded</strong>. Grounding provides a path for electrons to move between the conductor and Earth.</p><ol class="steps"><li>Bring the charged rod near the neutral conductor.</li><li>Charges separate inside the conductor.</li><li>Connect the conductor to ground.</li><li>Remove the ground connection <strong>while the rod is still nearby</strong>.</li><li>Then remove the charged rod.</li></ol></div>
+  </div>
+</section>
+
+<section class="slide" data-section="scope">
+  <span class="kicker"><span class="dot"></span> Grounding</span>
+  <h2 class="head">What grounding does</h2>
+  <div class="callout"><div class="t">Definition</div>Grounding connects a conductor to Earth so electrons can move between the object and the Earth.</div>
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><div class="tag">Negative rod near conductor</div><p>The rod repels electrons. When the conductor is grounded, some electrons can <strong>leave to Earth</strong>. If the ground is removed first, the conductor is left <strong>positively charged</strong> after the rod is removed.</p></div>
+    <div class="card"><div class="tag">Positive rod near conductor</div><p>The rod attracts electrons. With grounding, electrons can <strong>come from Earth</strong> into the conductor. Removing the ground first leaves the conductor with excess electrons, so it becomes <strong>negative</strong>.</p></div>
+  </div>
+  <div class="mistake" style="margin-top:16px"><div class="t">Order matters in induction</div><ul><li>Keep the charged rod nearby while grounding.</li><li><strong>Remove the ground first.</strong></li><li>Remove the charged rod last.</li></ul></div>
+</section>
+
+<section class="slide" data-section="scope">
+  <span class="kicker"><span class="dot"></span> Electroscope</span>
+  <h2 class="head">What an electroscope does</h2>
+  <div class="grid g2">
+    <figure class="svgcard">
+      <svg viewBox="0 0 430 430" role="img" aria-label="Simple electroscope diagram">
+        <circle cx="215" cy="55" r="38" fill="#f8cc69" stroke="#7b6530" stroke-width="3"/><line x1="215" y1="93" x2="215" y2="245" stroke="#626a78" stroke-width="10"/>
+        <path d="M215 245 L160 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"/><path d="M215 245 L270 335" stroke="#c9a343" stroke-width="14" stroke-linecap="round"/>
+        <rect x="100" y="120" width="230" height="260" rx="28" fill="none" stroke="#cfd6e6" stroke-width="4"/>
+        <text x="304" y="55" font-size="16" fill="#46506b">metal ball</text><text x="240" y="175" font-size="16" fill="#46506b">metal rod</text><text x="274" y="326" font-size="16" fill="#46506b">metal leaves</text>
+      </svg>
+      <figcaption>Basic parts: metal ball/knob, metal rod, and two metallic leaves.</figcaption>
+    </figure>
+    <div class="card"><div class="tag">Purpose</div><p>An electroscope is an instrument used to <strong>detect whether an object is charged</strong>.</p><div class="subtle"><strong>Neutral electroscope:</strong> leaves stay close together.</div><div class="subtle" style="margin-top:10px"><strong>Charged or polarized electroscope:</strong> the leaves can diverge because they carry like charges and repel each other.</div></div>
+  </div>
+</section>
+
+<section class="slide" data-section="scope">
+  <span class="kicker"><span class="dot"></span> Electroscope reasoning</span>
+  <h2 class="head">Why do the leaves separate?</h2>
+  <div class="grid g2">
+    <div class="card"><div class="tag">Negative rod approaches</div><p>The negative rod repels free electrons in the electroscope away from the knob and toward the leaves.</p><p>Both leaves gain extra electrons, so both become <strong>negative</strong>. Like charges repel, so the leaves move apart.</p></div>
+    <div class="card"><div class="tag">Positive rod approaches</div><p>The positive rod attracts free electrons toward the knob.</p><p>The leaves are left with a deficit of electrons, so both become <strong>positive</strong>. Like charges repel, so the leaves move apart.</p></div>
+  </div>
+  <div class="callout" style="margin-top:16px"><div class="t">Very important</div>The rod does not need to touch the electroscope for the leaves to diverge. A nearby charged rod can cause <strong>induction / separation of charge</strong>.</div>
+</section>
+
+<section class="slide" data-section="scope">
+  <span class="kicker"><span class="dot"></span> One-page memory table</span>
+  <h2 class="head">Identify the process from the clues</h2>
+  <table class="tbl"><thead><tr><th>Clue in question</th><th>Process</th><th>What to say</th></tr></thead><tbody>
+    <tr><td>“Rubbed with…”</td><td>Friction</td><td>Electrons transfer from one material to the other.</td></tr>
+    <tr><td>“Touches a charged rod/sphere…”</td><td>Contact</td><td>Electrons transfer through physical contact.</td></tr>
+    <tr><td>“Brought near but does not touch…”</td><td>Induction</td><td>Electrons rearrange inside the conductor.</td></tr>
+    <tr><td>“Connected to Earth / finger touches / grounded…”</td><td>Grounding</td><td>Electrons can flow between the object and Earth.</td></tr>
+    <tr><td>“Leaves spread apart…”</td><td>Electroscope</td><td>The leaves carry like charges and repel.</td></tr>
+  </tbody></table>
+</section>
+
+<section class="slide" data-section="scope">
+  <span class="kicker"><span class="dot"></span> Common mistakes</span>
+  <h2 class="head">Mistakes that cost easy quiz marks</h2>
+  <div class="mistake"><div class="t">Avoid these</div><ul>
+    <li>Saying a positive object has “extra protons.” In ordinary electrification, the relevant change is a <strong>loss of electrons</strong>.</li>
+    <li>Forgetting the sign: <strong>gains electrons → negative</strong>; <strong>loses electrons → positive</strong>.</li>
+    <li>Using nC or μC directly in Q = N·e without first converting to coulombs.</li>
+    <li>Getting a non-integer value of N and accepting it as an exact number of electrons.</li>
+    <li>Calling induction “contact.” In induction, the charging object is <strong>nearby but not touching</strong>.</li>
+    <li>Saying electroscope leaves attract. They diverge because they have the <strong>same sign</strong> and repel.</li>
+    <li>In induction with grounding, removing the rod before the ground. The ground must be removed first.</li>
+  </ul></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Worksheet practice · Set A</span>
+  <h2 class="head">Quantity of charge — from the AMER worksheet</h2>
+  <p class="small">Original worksheet numbering is preserved. The conservation-of-charge part of Question 2 is omitted because it is outside the quiz scope.</p>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q1</span><p>An object carries 7 elementary positive charges and 3 elementary negative charges. Find the net charge, including its sign.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Net elementary charges = 7 − 3 = 4 positive charges.<br>Q = 4(1.6 × 10<sup>−19</sup>) = <strong>+6.4 × 10<sup>−19</sup> C</strong>.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q2(a)</span><p>A neutral object has 30 protons and 30 electrons. It loses 5 electrons. What is its new charge?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Losing electrons makes the object positive. It has a deficit of 5 electrons.<br>Q = +5e = 5(1.6 × 10<sup>−19</sup>) = <strong>+8.0 × 10<sup>−19</sup> C</strong>.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q4</span><p>An object carries a charge of −4.8 × 10<sup>−19</sup> C. Does it have an excess or deficit of electrons, and how many?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">The negative sign means <strong>excess electrons</strong>.<br>N = |Q|/e = (4.8 × 10<sup>−19</sup>)/(1.6 × 10<sup>−19</sup>) = <strong>3 excess electrons</strong>.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q5</span><p>How many electrons must be added to a neutral metal sphere to give it a charge magnitude of 1.0 nC? State the final sign.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">1.0 nC = 1.0 × 10<sup>−9</sup> C.<br>N = |Q|/e = (1.0 × 10<sup>−9</sup>)/(1.6 × 10<sup>−19</sup>) = <strong>6.25 × 10<sup>9</sup> electrons</strong>.<br>Because electrons are added, the sphere is <strong>negative</strong>.</div></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Worksheet practice · Set B</span>
+  <h2 class="head">More Q = N·e calculations</h2>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q6</span><p>A small sphere has a charge of −2.00 nC. (a) How many excess electrons does it carry? (b) By what factor is this different from the number for −1.00 nC?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">|Q| = 2.00 × 10<sup>−9</sup> C.<br>N = (2.00 × 10<sup>−9</sup>)/(1.6 × 10<sup>−19</sup>) = <strong>1.25 × 10<sup>10</sup> excess electrons</strong>.<br>For −1.00 nC, the number is half as large, so the factor is <strong>2</strong>.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q7</span><p>A system contains 212 electrons and 165 protons. (a) Find its total charge. (b) How many electrons must be added or removed to make it neutral?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">There are 212 − 165 = <strong>47 excess electrons</strong>.<br>Q = −47e = −47(1.6 × 10<sup>−19</sup>) = <strong>−7.52 × 10<sup>−18</sup> C</strong>.<br>To become neutral, <strong>47 electrons must be removed</strong>.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q8</span><p>A metal sphere carries −3.2 × 10<sup>−6</sup> μC. (a) How many excess electrons are on it? (b) If m<sub>e</sub> = 9.11 × 10<sup>−31</sup> kg, find the total mass of those excess electrons.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">First convert: −3.2 × 10<sup>−6</sup> μC = −3.2 × 10<sup>−12</sup> C.<br>N = (3.2 × 10<sup>−12</sup>)/(1.6 × 10<sup>−19</sup>) = <strong>2.0 × 10<sup>7</sup> excess electrons</strong>.<br>Mass = N m<sub>e</sub> = (2.0 × 10<sup>7</sup>)(9.11 × 10<sup>−31</sup>) = <strong>1.822 × 10<sup>−23</sup> kg</strong>, an extremely small mass.</div></div>
+  <div class="qbox"><span class="qn">Worksheet 1 · Q10</span><p>The pulled tape carries 0.14 μC of positive charge per centimetre. What length corresponds to the transfer of 1.8 × 10<sup>13</sup> electrons? Express the answer in metres and state the pulled tape’s sign.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Transferred charge magnitude: Q = Ne = (1.8 × 10<sup>13</sup>)(1.6 × 10<sup>−19</sup>) = 2.88 × 10<sup>−6</sup> C = 2.88 μC.<br>Length = 2.88 / 0.14 = 20.57 cm = <strong>0.206 m</strong> (approximately). The pulled tape is <strong>positive</strong>.</div></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Worksheet practice · Set C</span>
+  <h2 class="head">Multiple choice — attached Q = N·e worksheet</h2>
+  <div class="qbox"><span class="qn">MCQ · Q1</span><p>Which statement is correct? A) positive when gaining electrons · B) negative when gaining electrons · C) positive when gaining protons · D) negative when losing electrons</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution"><strong>B.</strong> Gaining electrons gives an object an excess of negative charge, so it becomes negatively charged.</div></div>
+  <div class="qbox"><span class="qn">MCQ · Q2</span><p>A neutral object gains 5.0 × 10<sup>12</sup> electrons. Find its total charge.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Q = −Ne = −(5.0 × 10<sup>12</sup>)(1.6 × 10<sup>−19</sup>) = <strong>−8.0 × 10<sup>−7</sup> C</strong>.</div></div>
+  <div class="qbox"><span class="qn">MCQ · Q3</span><p>An object has charge +4.8 × 10<sup>−19</sup> C. How many electrons were transferred, and what happened to them?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">N = (4.8 × 10<sup>−19</sup>)/(1.6 × 10<sup>−19</sup>) = 3. A positive charge means electrons were lost. <strong>Three electrons were lost.</strong></div></div>
+  <div class="qbox"><span class="qn">MCQ · Q4</span><p>A small sphere has charge −3.2 × 10<sup>−18</sup> C. How many excess electrons does it have?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">N = (3.2 × 10<sup>−18</sup>)/(1.6 × 10<sup>−19</sup>) = <strong>20 excess electrons</strong>.</div></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Worksheet practice · Set D</span>
+  <h2 class="head">Multiple choice — continued</h2>
+  <div class="qbox"><span class="qn">MCQ · Q5</span><p>A neutral metal sphere loses 2.5 × 10<sup>13</sup> electrons. What is the resulting charge?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Losing electrons makes it positive.<br>Q = +(2.5 × 10<sup>13</sup>)(1.6 × 10<sup>−19</sup>) = <strong>+4.0 × 10<sup>−6</sup> C</strong>.</div></div>
+  <div class="qbox"><span class="qn">MCQ · Q6</span><p>An object initially has −6.4 × 10<sup>−19</sup> C and then loses 7 electrons. Find its final charge.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Initial charge = −4e. Losing 7 electrons changes the charge by +7e.<br>Final charge = (−4e + 7e) = +3e = <strong>+4.8 × 10<sup>−19</sup> C</strong>.</div></div>
+  <div class="qbox"><span class="qn">MCQ · Q7</span><p>Can an object have a charge of −3.0 × 10<sup>−19</sup> C if charge is quantized in units of e = 1.6 × 10<sup>−19</sup> C?</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">N = |Q|/e = 3.0/1.6 = 1.875, which is not an integer number of electrons. Therefore <strong>the stated charge is not possible as an exact isolated-object charge in this model</strong>.</div></div>
+  <div class="qbox"><span class="qn">MCQ · Q8</span><p>A neutral object gains 3.75 × 10<sup>13</sup> electrons and then loses 1.25 × 10<sup>13</sup> electrons. Find the final charge and net electron transfer.</p><button class="solbtn" onclick="sol(this)">Show solution</button><div class="solution">Net gain = 3.75 × 10<sup>13</sup> − 1.25 × 10<sup>13</sup> = 2.50 × 10<sup>13</sup> electrons.<br>Q = −(2.50 × 10<sup>13</sup>)(1.6 × 10<sup>−19</sup>) = <strong>−4.0 μC</strong>. Net transfer: <strong>gain of 2.50 × 10<sup>13</sup> electrons</strong>.</div></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Final formula sheet</span>
+  <h2 class="head">Everything to memorize</h2>
+  <div class="grid g2">
+    <div class="formula"><div class="eq">Q = N·e</div><div class="where">quantity of charge</div></div>
+    <div class="formula"><div class="eq">N = |Q| / e</div><div class="where">number of excess or missing electrons</div></div>
+    <div class="formula"><div class="eq">e = 1.6 × 10<sup>−19</sup> C</div><div class="where">magnitude of one elementary charge</div></div>
+    <div class="formula"><div class="eq">1 nC = 10<sup>−9</sup> C &nbsp; · &nbsp; 1 μC = 10<sup>−6</sup> C</div><div class="where">unit conversions</div></div>
+  </div>
+  <div class="callout"><div class="t">Sign memory</div><strong>Gain electrons → negative.</strong> &nbsp; <strong>Lose electrons → positive.</strong></div>
+</section>
+
+<section class="slide" data-section="practice">
+  <span class="kicker"><span class="dot"></span> Final checklist</span>
+  <h2 class="head">Can you do these without looking back?</h2>
+  <ul class="check" id="checklist">
+    <li><span class="bx"></span><span>Use Q = N·e and N = |Q|/e.</span></li>
+    <li><span class="bx"></span><span>Use e = 1.6 × 10<sup>−19</sup> C.</span></li>
+    <li><span class="bx"></span><span>Convert nC and μC to coulombs before calculating.</span></li>
+    <li><span class="bx"></span><span>Explain why gaining electrons makes an object negative and losing electrons makes it positive.</span></li>
+    <li><span class="bx"></span><span>Distinguish friction, contact and induction from a short scenario.</span></li>
+    <li><span class="bx"></span><span>Explain the role of grounding during induction.</span></li>
+    <li><span class="bx"></span><span>State what an electroscope is used for.</span></li>
+    <li><span class="bx"></span><span>Explain why electroscope leaves diverge for either a nearby positive or negative charged rod.</span></li>
+    <li><span class="bx"></span><span>Remember that the law of conservation of charge is outside this quiz scope.</span></li>
+  </ul>
+</section>
+
+<section class="slide" data-section="practice">
+  <div class="center" style="padding-top:5vh"><span class="kicker"><span class="dot"></span> Revision complete</span><h1 class="title">Electrostatics Quiz<br>Study Guide Complete</h1><p class="lead center" style="margin:0 auto">Redo the worksheet calculations without opening the solutions, then explain friction, contact, induction, grounding and electroscope behavior aloud in your own words.</p><div class="callout" style="max-width:780px;margin:28px auto 0;text-align:left"><div class="t">Final memory anchors</div><strong>Q = N·e.</strong> Gain e⁻ → negative. Lose e⁻ → positive. <strong>Friction = rubbing.</strong> <strong>Contact = touching.</strong> <strong>Induction = nearby, no touch.</strong> <strong>Grounding = electron path to/from Earth.</strong> <strong>Electroscope leaves diverge because like charges repel.</strong></div></div>
+</section>
+
+</main>
+<div class="navbar"><div class="navbar-inner"><button class="navbtn" id="prevBtn">← Back</button><span class="counter" id="counter"></span><span class="kbdhint"><span class="kbd">←</span> <span class="kbd">→</span></span><button class="navbtn primary" id="nextBtn">Next →</button></div></div>
+<script>
+(function(){
+  var slides=Array.prototype.slice.call(document.querySelectorAll('.slide')); var cur=0;
+  var labels={start:'Start',charge:'Q = N·e',modes:'3 Modes',scope:'Electroscope & Grounding',practice:'Practice'};
+  var order=['start','charge','modes','scope','practice']; var firstIndex={};
+  slides.forEach(function(s,i){var sec=s.dataset.section;if(firstIndex[sec]===undefined)firstIndex[sec]=i;});
+  var nav=document.getElementById('secnav');
+  order.forEach(function(sec){var b=document.createElement('button');b.textContent=labels[sec];b.dataset.sec=sec;b.addEventListener('click',function(){show(firstIndex[sec]);});nav.appendChild(b);});
+  function show(i){cur=Math.max(0,Math.min(i,slides.length-1));slides.forEach(function(s,j){s.classList.toggle('show',j===cur);});document.getElementById('prevBtn').disabled=(cur===0);document.getElementById('nextBtn').disabled=(cur===slides.length-1);document.getElementById('counter').textContent=(cur+1)+' / '+slides.length;document.getElementById('progbar').style.width=((cur+1)/slides.length*100)+'%';var sec=slides[cur].dataset.section;Array.prototype.forEach.call(nav.children,function(b){b.classList.toggle('active',b.dataset.sec===sec);});window.scrollTo(0,0);}
+  document.getElementById('prevBtn').addEventListener('click',function(){show(cur-1);});document.getElementById('nextBtn').addEventListener('click',function(){show(cur+1);});document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});
+  Array.prototype.forEach.call(document.querySelectorAll('.maprow'),function(el){el.addEventListener('click',function(){var t=el.dataset.go;if(firstIndex[t]!==undefined)show(firstIndex[t]);});});
+  window.sol=function(btn){var x=btn.nextElementSibling;var open=x.classList.toggle('open');btn.textContent=open?'Hide solution':'Show solution';};
+  Array.prototype.forEach.call(document.querySelectorAll('#checklist li'),function(li){li.addEventListener('click',function(){li.classList.toggle('done');});});
+  show(0);
+})();
+</script>
+</body>
+</html>
